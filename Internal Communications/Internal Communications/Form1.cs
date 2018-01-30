@@ -16,5 +16,29 @@ namespace Internal_Communications
         {
             InitializeComponent();
         }
+
+        private void btnEmail_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Email email_form = new Internal_Communications.Email();
+            email_form.ShowDialog();
+            this.Close();
+        }
+
+        private void btnNotificationSystem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Notificaton_System notification_form = new Notificaton_System();
+            notification_form.ShowDialog();
+            this.Close();
+        }
+
+        private void btnInstandMessaging_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Instant Chat = new InstantMessagingClient();
+            Chat.ShowDialog();
+            this.Close();
+        }
     }
 }

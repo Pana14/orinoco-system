@@ -37,7 +37,6 @@
             // btnNotificationSystem
             // 
             this.btnNotificationSystem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(153)))), ((int)(((byte)(0)))));
-            this.btnNotificationSystem.Enabled = false;
             this.btnNotificationSystem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNotificationSystem.Location = new System.Drawing.Point(12, 12);
             this.btnNotificationSystem.Name = "btnNotificationSystem";
@@ -45,6 +44,7 @@
             this.btnNotificationSystem.TabIndex = 13;
             this.btnNotificationSystem.Text = "Notification System";
             this.btnNotificationSystem.UseVisualStyleBackColor = false;
+            this.btnNotificationSystem.Click += new System.EventHandler(this.btnNotificationSystem_Click);
             // 
             // btnInstandMessaging
             // 
@@ -57,11 +57,11 @@
             this.btnInstandMessaging.TabIndex = 14;
             this.btnInstandMessaging.Text = "INSTANT Messaging";
             this.btnInstandMessaging.UseVisualStyleBackColor = false;
+            this.btnInstandMessaging.Click += new System.EventHandler(this.btnInstandMessaging_Click);
             // 
             // btnEmail
             // 
             this.btnEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(153)))), ((int)(((byte)(0)))));
-            this.btnEmail.Enabled = false;
             this.btnEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmail.Location = new System.Drawing.Point(314, 12);
             this.btnEmail.Name = "btnEmail";
@@ -69,6 +69,7 @@
             this.btnEmail.TabIndex = 15;
             this.btnEmail.Text = "Email";
             this.btnEmail.UseVisualStyleBackColor = false;
+            this.btnEmail.Click += new System.EventHandler(this.btnEmail_Click);
             // 
             // btnAdditionalFunction
             // 

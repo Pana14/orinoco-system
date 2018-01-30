@@ -1,1 +1,15 @@
 f:\my documents\visual studio 2015\Projects\Internal Communications\Internal Communications\bin\Debug\Internal Communications.exe.config
+F:\My Documents\GitHub\orinoco-system\orinoco-system\Internal Communications\Internal Communications\bin\Debug\Internal Communications.exe.config
+F:\My Documents\GitHub\orinoco-system\orinoco-system\Internal Communications\Internal Communications\bin\Debug\Internal Communications.exe
+F:\My Documents\GitHub\orinoco-system\orinoco-system\Internal Communications\Internal Communications\bin\Debug\Internal Communications.pdb
+F:\My Documents\GitHub\orinoco-system\orinoco-system\Internal Communications\Internal Communications\obj\Debug\Internal Communications.csprojResolveAssemblyReference.cache
+F:\My Documents\GitHub\orinoco-system\orinoco-system\Internal Communications\Internal Communications\obj\Debug\Internal_Communications.Email.resources
+F:\My Documents\GitHub\orinoco-system\orinoco-system\Internal Communications\Internal Communications\obj\Debug\Internal_Communications.Email_Options.resources
+F:\My Documents\GitHub\orinoco-system\orinoco-system\Internal Communications\Internal Communications\obj\Debug\Internal_Communications.Form1.resources
+F:\My Documents\GitHub\orinoco-system\orinoco-system\Internal Communications\Internal Communications\obj\Debug\Internal_Communications.Properties.Resources.resources
+F:\My Documents\GitHub\orinoco-system\orinoco-system\Internal Communications\Internal Communications\obj\Debug\Internal Communications.csproj.GenerateResource.Cache
+F:\My Documents\GitHub\orinoco-system\orinoco-system\Internal Communications\Internal Communications\obj\Debug\Internal Communications.exe
+F:\My Documents\GitHub\orinoco-system\orinoco-system\Internal Communications\Internal Communications\obj\Debug\Internal Communications.pdb
+F:\My Documents\GitHub\orinoco-system\orinoco-system\Internal Communications\Internal Communications\obj\Debug\Internal_Communications.Notificaton_System.resources
+F:\My Documents\GitHub\orinoco-system\orinoco-system\Internal Communications\Internal Communications\obj\Debug\Server.Server.resources
+F:\My Documents\GitHub\orinoco-system\orinoco-system\Internal Communications\Internal Communications\obj\Debug\Client.Form1.resources

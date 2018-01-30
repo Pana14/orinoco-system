@@ -46,16 +46,61 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Email.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Email.Designer.cs">
+      <DependentUpon>Email.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Email_Options.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Email_Options.Designer.cs">
+      <DependentUpon>Email_Options.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="InstantMessaging.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstantMessaging.Designer.cs">
+      <DependentUpon>InstantMessaging.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstantMessagingClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstantMessagingClient.Designer.cs">
+      <DependentUpon>InstantMessagingClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notificaton_System.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notificaton_System.Designer.cs">
+      <DependentUpon>Notificaton_System.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Email.resx">
+      <DependentUpon>Email.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Email_Options.resx">
+      <DependentUpon>Email_Options.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstantMessaging.resx">
+      <DependentUpon>InstantMessaging.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstantMessagingClient.resx">
+      <DependentUpon>InstantMessagingClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notificaton_System.resx">
+      <DependentUpon>Notificaton_System.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
