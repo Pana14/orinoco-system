@@ -33,10 +33,10 @@ namespace Internal_Communications
             this.Close();
         }
 
-        private void btnInstandMessaging_Click(object sender, EventArgs e)
+        private void btnInstantMessaging_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            Instant Chat = new InstantMessagingClient();
+            InstantMessaging Chat = new InstantMessaging();
             Chat.ShowDialog();
             this.Close();
         }

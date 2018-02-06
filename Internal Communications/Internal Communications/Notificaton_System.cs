@@ -16,5 +16,13 @@ namespace Internal_Communications
         {
             InitializeComponent();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 Menu = new Form1();
+            Menu.ShowDialog();
+            this.Close();
+        }
     }
 }

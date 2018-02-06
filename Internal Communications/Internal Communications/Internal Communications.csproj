@@ -70,12 +70,6 @@
     <Compile Include="InstantMessaging.Designer.cs">
       <DependentUpon>InstantMessaging.cs</DependentUpon>
     </Compile>
-    <Compile Include="InstantMessagingClient.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InstantMessagingClient.Designer.cs">
-      <DependentUpon>InstantMessagingClient.cs</DependentUpon>
-    </Compile>
     <Compile Include="Notificaton_System.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,9 +89,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InstantMessaging.resx">
       <DependentUpon>InstantMessaging.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InstantMessagingClient.resx">
-      <DependentUpon>InstantMessagingClient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Notificaton_System.resx">
       <DependentUpon>Notificaton_System.cs</DependentUpon>

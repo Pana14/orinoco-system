@@ -7,68 +7,93 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Net;
 using System.Net.Sockets;
-using System.Threading;
+using System.Net;
+using System.IO;
 
-
-namespace Server
+namespace Internal_Communications
 {
-    public partial class Server : Form
+    public partial class InstantMessaging : Form
     {
-        IPAddress host;
-        TcpListener Listener;
-        Socket ClientConnection;
-        Thread ListeningThread;
+        TcpClient Client = new TcpClient();
 
-        public Server()
+        public InstantMessaging()
         {
             InitializeComponent();
-        }
-
-        private void Server_Load(object sender, EventArgs e)
-        {
-            btn_Stop.Enabled = false;
-            brn_Back.Enabled = false;
-            host = GetLocalIP();
-        }
-
-
-        private void btn_Start_Click(object sender, EventArgs e)
-        {
-            brn_Back.Enabled = true;
-            btn_Start.Enabled = false;
-            ListeningThread = new Thread(new ThreadStart(CreateConnection)); //assign thread variable with the blocking function
-            ListeningThread.Start();
-        }
-
-        private void btn_Stop_Click(object sender, EventArgs e)
-        {
 
         }
 
-        //find my own IP
-        private IPAddress GetLocalIP()
+        private void Form1_Load(object sender, EventArgs e)
         {
+            btn_Back.Enabled = false;
+            btn_Disconnect.Enabled = false;
+            btn_Send.Enabled = false;
+            txt_Host.Text = GetLocalIP();
+        }
+
+        private void btn_Connect_Click(object sender, EventArgs e)
+        {
+            btn_Send.Enabled = true;
+            btn_Connect.Enabled = false;
+            ConnectToServer();
+        }
+
+        private void btn_Send_Click(object sender, EventArgs e)
+        {
+            if (txt_Message.Text == "") return;
+            else
+            {
+                Stream stm = Client.GetStream();
+                string str = txt_Message.Text;
+                ASCIIEncoding asen = new ASCIIEncoding();
+                byte[] ba = asen.GetBytes(str);
+                stm.Write(ba, 0, ba.Length);
+
+                lst_Status.Items.Add("You said : " + str);
+                txt_Message.Text = "";
+            }
+            /*byte[] bb = new byte[100];
+            int k = stm.Read(bb, 0, 100);
+
+            string msg = "";
+            for (int i = 0; i < k; i++)
+            {
+                msg += (Convert.ToChar(bb[i]));
+            }
+            lst_Status.Items.Add(msg);*/
+        }
+
+        private void txt_Message_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private string GetLocalIP()
+        {
+            //find my own IP
             IPAddress[] localip = Dns.GetHostAddresses(Dns.GetHostName());
             foreach (IPAddress address in localip)
             {
                 if (address.AddressFamily == AddressFamily.InterNetwork)
-                    return address;
+                    return address.ToString();
             }
-            return IPAddress.Any;
+            return "127.0.0.1";
         }
 
-        //Create a connection
-        private void CreateConnection()
+        private void ConnectToServer()
         {
-            IPEndPoint localEndPoint = new IPEndPoint(host, 80);
-            Listener = new TcpListener(localEndPoint);//listen to given localEndPoint
-            Listener.Start();//start listening for connections;
-            //lst_Status.Items.Add("Listening For Connections...");
-            ClientConnection = Listener.AcceptSocket();//waits untill a client connects  
-            //lst_Status.Items.Add("Connection Accepted : " + (ClientConnection.RemoteEndPoint));//shows the connected client's information   
-            //lst_Status.Items.Add("***********************************************************************");            
+            try
+            {
+                IPEndPoint serverEndPoint = new IPEndPoint(IPAddress.Parse(txt_Host.Text), 80);//specifying the server's IP End Point
+                lst_Status.Items.Add("Connecting....");
+                Client.Connect(serverEndPoint);//connect to server
+                lst_Status.Items.Add("Connected to " + (serverEndPoint));
+                lst_Status.Items.Add("*****************************************************************************");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Wrong IP Address", "Server Not Available");
+            }
         }
 
         private void lst_Status_SelectedIndexChanged(object sender, EventArgs e)
@@ -76,26 +101,21 @@ namespace Server
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void btn_Disconnect_Click(object sender, EventArgs e)
         {
-
-            byte[] b = new byte[100];
-            int k = ClientConnection.Receive(b);
-
-            string msg = "";
-            for (int i = 0; i < k; i++)
-            {
-                msg += (Convert.ToChar(b[i]));
-            }
-            lst_Status.Items.Add(msg);
-
-            //ASCIIEncoding asen = new ASCIIEncoding();
-            //ClientConnection.Send(asen.GetBytes("Automatic message: " + " String received by server!"));
         }
 
         private void brn_Back_Click(object sender, EventArgs e)
         {
-            textBox1.Text += " ";
+
+        }
+
+        private void btn_Back_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 Menu = new Form1();
+            Menu.ShowDialog();
+            this.Close();
         }
     }
 }

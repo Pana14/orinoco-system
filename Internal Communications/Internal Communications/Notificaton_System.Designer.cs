@@ -181,6 +181,7 @@
             this.btnBack.TabIndex = 10;
             this.btnBack.Text = "←";
             this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // lblTitle
             // 

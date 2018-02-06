@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btnNotificationSystem = new System.Windows.Forms.Button();
-            this.btnInstandMessaging = new System.Windows.Forms.Button();
+            this.btnInstantMessaging = new System.Windows.Forms.Button();
             this.btnEmail = new System.Windows.Forms.Button();
             this.btnAdditionalFunction = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -46,18 +46,17 @@
             this.btnNotificationSystem.UseVisualStyleBackColor = false;
             this.btnNotificationSystem.Click += new System.EventHandler(this.btnNotificationSystem_Click);
             // 
-            // btnInstandMessaging
+            // btnInstantMessaging
             // 
-            this.btnInstandMessaging.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(153)))), ((int)(((byte)(0)))));
-            this.btnInstandMessaging.Enabled = false;
-            this.btnInstandMessaging.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInstandMessaging.Location = new System.Drawing.Point(12, 229);
-            this.btnInstandMessaging.Name = "btnInstandMessaging";
-            this.btnInstandMessaging.Size = new System.Drawing.Size(252, 150);
-            this.btnInstandMessaging.TabIndex = 14;
-            this.btnInstandMessaging.Text = "INSTANT Messaging";
-            this.btnInstandMessaging.UseVisualStyleBackColor = false;
-            this.btnInstandMessaging.Click += new System.EventHandler(this.btnInstandMessaging_Click);
+            this.btnInstantMessaging.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(153)))), ((int)(((byte)(0)))));
+            this.btnInstantMessaging.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInstantMessaging.Location = new System.Drawing.Point(12, 229);
+            this.btnInstantMessaging.Name = "btnInstantMessaging";
+            this.btnInstantMessaging.Size = new System.Drawing.Size(252, 150);
+            this.btnInstantMessaging.TabIndex = 14;
+            this.btnInstantMessaging.Text = "INSTANT Messaging";
+            this.btnInstantMessaging.UseVisualStyleBackColor = false;
+            this.btnInstantMessaging.Click += new System.EventHandler(this.btnInstantMessaging_Click_1);
             // 
             // btnEmail
             // 
@@ -90,7 +89,7 @@
             this.ClientSize = new System.Drawing.Size(578, 391);
             this.Controls.Add(this.btnAdditionalFunction);
             this.Controls.Add(this.btnEmail);
-            this.Controls.Add(this.btnInstandMessaging);
+            this.Controls.Add(this.btnInstantMessaging);
             this.Controls.Add(this.btnNotificationSystem);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -101,7 +100,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnNotificationSystem;
-        private System.Windows.Forms.Button btnInstandMessaging;
+        private System.Windows.Forms.Button btnInstantMessaging;
         private System.Windows.Forms.Button btnEmail;
         private System.Windows.Forms.Button btnAdditionalFunction;
     }
